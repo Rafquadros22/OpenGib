@@ -1,0 +1,60 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1;
+
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+  color: black;
+  border-radius: 0;
+  border-bottom: 10px solid black;
+}
+
+.description{
+  white-space: pre-wrap;
+}
+
+
+.row {
+  white-space: pre-wrap;
+  height: 80px;
+  border-top: 1px solid white;;
+  justify-content: center;
+}
+
+
+.saveBtn {
+  border-left: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #06AED5;
+  color: white;
+}
+
+.saveBtn i:hover {
+  font-size: 20px;
+  transition: all .3s ease-in-out;
+}
+
+
+.time-frame {
+  background-color: #000000;
+  color: #ffffff;
+  width: 300px;
+  font-family: Arial;
+}
+
+.time-frame > div {
+  width: 100%;
+  text-align: center;
+}
+
+#currentDay {
+  font-size: 2em;
+}
+#currentTime {
+  font-size: 2em;
+}
