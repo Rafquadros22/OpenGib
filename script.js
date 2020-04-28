@@ -16,15 +16,17 @@ $(document).ready(function () {
 
   //color codes the current time and future times
   function updateTime() {
-    var currentHour = moment().format("hh");
+    var currentHour = parseInt(moment().format("H"));
     $("input").each(function () {
       var calendarHour = parseInt($(this).attr("id"));
+        console.log(currentHour);
+        console.log(calendarHour);
       if (calendarHour > currentHour) {
         $(this).css("background", "red");
-      } else if (calendarHour < currentHour) {
+      } if (calendarHour < currentHour) {
         $(this).css("background", "green");
       }
-      else  {
+      if (calendarHour == currentHour) {
         $(this).css("background", "grey");
       }
     });
@@ -37,9 +39,10 @@ $(document).ready(function () {
     window.location.href = window.location.href;
   });
 
-  
-  //save buttons
-  $("#saveBtn9").on("click", function () {
+
+
+//save buttons
+   $("#saveBtn9").on("click", function () {
     var timeDay = $(this).parent().attr("id");
 
     var textContent = $("#9").val().trim();
@@ -87,7 +90,7 @@ $(document).ready(function () {
   $("#saveBtn1").on("click", function () {
     var timeDay = $(this).parent().attr("id");
 
-    var textContent = $("#1").val().trim();
+    var textContent = $("#13").val().trim();
 
     localStorage.setItem(timeDay, textContent);
 
@@ -98,7 +101,7 @@ $(document).ready(function () {
   $("#saveBtn2").on("click", function () {
     var timeDay = $(this).parent().attr("id");
 
-    var textContent = $("#2").val().trim();
+    var textContent = $("#14").val().trim();
 
     localStorage.setItem(timeDay, textContent);
 
@@ -109,7 +112,7 @@ $(document).ready(function () {
   $("#saveBtn3").on("click", function () {
     var timeDay = $(this).parent().attr("id");
 
-    var textContent = $("#3").val().trim();
+    var textContent = $("#15").val().trim();
 
     localStorage.setItem(timeDay, textContent);
 
@@ -120,7 +123,7 @@ $(document).ready(function () {
   $("#saveBtn4").on("click", function () {
     var timeDay = $(this).parent().attr("id");
 
-    var textContent = $("#4").val().trim();
+    var textContent = $("#16").val().trim();
 
     localStorage.setItem(timeDay, textContent);
 
@@ -131,11 +134,11 @@ $(document).ready(function () {
   $("#saveBtn5").on("click", function () {
     var timeDay = $(this).parent().attr("id");
 
-    var textContent = $("#5").val().trim();
+    var textContent = $("#17").val().trim();
 
     localStorage.setItem(timeDay, textContent);
 
     console.log(timeDay, textContent);
   });
   $("#5pm").children("input").val(localStorage.getItem("5pm"));
-});
+ });
